@@ -5,14 +5,14 @@ import 'package:furniture_app/resource/app_color.dart';
 import 'package:furniture_app/resource/extensions/num_ext.dart';
 import 'package:furniture_app/resource/text_style.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SigninScreen extends StatefulWidget {
+  const SigninScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SigninScreen> createState() => _SigninScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SigninScreenState extends State<SigninScreen> {
   TextEditingController phoneNumberController = TextEditingController();
   TextEditingController emailController = TextEditingController();
 
@@ -28,44 +28,30 @@ class _LoginScreenState extends State<LoginScreen> {
               80.heightBox,
               const Center(
                   child: Image(
-                      image: AssetImage("assets/images/png/login_pic.png"))),
+                      image: AssetImage("assets/images/png/signin_pic.png"))),
               30.heightBox,
               Text(
-                "Log in your account",
+                "Log in or sign up",
                 style: KTextStyle.K_24
                     .copyWith(color: Theme.of(context).colorScheme.secondary),
               ),
               5.heightBox,
               Text(
-                "Enter your login details to",
-                style: KTextStyle.K_12
-                    .copyWith(color: Theme.of(context).colorScheme.secondary),
-              ),
-              Text(
-                "access your account",
+                "Select desire log in method",
                 style: KTextStyle.K_12
                     .copyWith(color: Theme.of(context).colorScheme.secondary),
               ),
               20.heightBox,
               KTextFormField(
                   controller: phoneNumberController,
-                  hintText: "Username",
+                  hintText: "Phone Number",
                   prefixIcon: Icon(Icons.phone)),
               10.heightBox,
               KTextFormField(
                   controller: phoneNumberController,
-                  hintText: "Password",
+                  hintText: "email Address",
                   prefixIcon: Icon(Icons.email)),
-              4.heightBox,
-              Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  "Don't have account?",
-                  style: KTextStyle.K_10
-                      .copyWith(color: Theme.of(context).colorScheme.secondary),
-                ),
-              ),
-              12.heightBox,
+              20.heightBox,
               Container(
                 width: double.infinity,
                 height: 50,
@@ -73,29 +59,37 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: AppColor.blue,
                     borderRadius: BorderRadius.circular(12)),
                 child: Center(
-                  child: Text(
-                    "Log in",
-                    style: KTextStyle.K_16.copyWith(
-                        color: Theme.of(context).colorScheme.secondary),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                        child: Text(
+                          "G",
+                          style: KTextStyle.K_24.copyWith(
+                              color: Theme.of(context).colorScheme.secondary),
+                        ),
+                      ),
+                      20.widthBox,
+                      Text(
+                        "Log in with Google",
+                        style: KTextStyle.K_16.copyWith(
+                            color: Theme.of(context).colorScheme.secondary),
+                      ),
+                    ],
                   ),
                 ),
               ),
               20.heightBox,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Don't have account?",
-                    style: KTextStyle.K_10.copyWith(
-                        color: Theme.of(context).colorScheme.secondary),
-                  ),
-                  2.heightBox,
-                  Text(
-                    "Terms of Service",
-                    style: KTextStyle.K_10.copyWith(color: AppColor.darkBlue),
-                  ),
-                ],
-              )
+              Text(
+                "By registering or skipping this your agree to",
+                style: KTextStyle.K_10
+                    .copyWith(color: Theme.of(context).colorScheme.secondary),
+              ),
+              2.heightBox,
+              Text(
+                "Terms of Service",
+                style: KTextStyle.K_10.copyWith(color: AppColor.darkBlue),
+              ),
             ],
           ),
         ),
