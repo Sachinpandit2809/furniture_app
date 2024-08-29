@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common_widgets/k_text_form_field.dart';
+import 'package:furniture_app/common_widgets/round_buttons.dart';
 import 'package:furniture_app/resource/app_color.dart';
 import 'package:furniture_app/resource/extensions/num_ext.dart';
 import 'package:furniture_app/resource/text_style.dart';
@@ -52,33 +53,7 @@ class _SigninScreenState extends State<SigninScreen> {
                   hintText: "email Address",
                   prefixIcon: Icon(Icons.email)),
               20.heightBox,
-              Container(
-                width: double.infinity,
-                height: 50,
-                decoration: BoxDecoration(
-                    color: AppColor.blue,
-                    borderRadius: BorderRadius.circular(12)),
-                child: Center(
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                        child: Text(
-                          "G",
-                          style: KTextStyle.K_24.copyWith(
-                              color: Theme.of(context).colorScheme.secondary),
-                        ),
-                      ),
-                      20.widthBox,
-                      Text(
-                        "Log in with Google",
-                        style: KTextStyle.K_16.copyWith(
-                            color: Theme.of(context).colorScheme.secondary),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              RoundButtons(title: "Log in with google", onPress: () {}),
               20.heightBox,
               Text(
                 "By registering or skipping this your agree to",

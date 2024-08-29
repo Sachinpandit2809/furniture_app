@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:furniture_app/common_widgets/k_text_form_field.dart';
+import 'package:furniture_app/common_widgets/round_buttons.dart';
 import 'package:furniture_app/resource/app_color.dart';
 import 'package:furniture_app/resource/extensions/num_ext.dart';
 import 'package:furniture_app/resource/text_style.dart';
@@ -66,20 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               12.heightBox,
-              Container(
-                width: double.infinity,
-                height: 50,
-                decoration: BoxDecoration(
-                    color: AppColor.blue,
-                    borderRadius: BorderRadius.circular(12)),
-                child: Center(
-                  child: Text(
-                    "Log in",
-                    style: KTextStyle.K_16.copyWith(
-                        color: Theme.of(context).colorScheme.secondary),
-                  ),
-                ),
-              ),
+              RoundButtons(title: "Log in", onPress: () {}),
               20.heightBox,
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
