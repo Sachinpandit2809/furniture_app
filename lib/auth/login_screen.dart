@@ -51,12 +51,12 @@ class _LoginScreenState extends State<LoginScreen> {
               KTextFormField(
                   controller: phoneNumberController,
                   hintText: "Username",
-                  prefixIcon: Icon(Icons.phone)),
+                  prefixIcon: const Icon(Icons.phone)),
               10.heightBox,
               KTextFormField(
                   controller: phoneNumberController,
                   hintText: "Password",
-                  prefixIcon: Icon(Icons.email)),
+                  prefixIcon: const Icon(Icons.key_outlined)),
               4.heightBox,
               Align(
                 alignment: Alignment.centerRight,
